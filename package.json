@@ -1,0 +1,29 @@
+{
+  "name": "pi-server",
+  "version": "1.0.0",
+  "description": "simple raspberry pi web server running nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/user2745/pi-server.git"
+  },
+  "keywords": [
+    "raspberry-pi",
+    "nodejs",
+    "server",
+    "pi",
+    "pi-server"
+  ],
+  "author": "Kevin Kamto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/user2745/pi-server/issues"
+  },
+  "homepage": "https://github.com/user2745/pi-server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
