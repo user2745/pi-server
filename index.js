@@ -24,15 +24,26 @@ app.get('/', (req, res) => {
 
 function domainUpdate() {
     console.log(`[SERVER] Posting to Google's Servers...`)
-    let username = process.env.USERNAME || `WFOv6DCwrlxnMOar`;
-    let password = process.env.PASSWORD || `Mk17mFlKzp3Za4fA`;
-    let hostname = process.env.HOSTNAME || `qgbyipzk.pw`;
+    let username = process.env.USERNAME;
+    let password = process.env.PASSWORD;
+    let hostname = process.env.HOSTNAME;
+
+    if (!username || !password || !hostname) {
+        console.log('Missing input required');
+    }
+
     let url = `https://${username}:${password}@domains.google.com/nic/update?hostname=${hostname}`;
 
-    https.request(url, (res) => {
+    console.log(`url: ${url}`)
+
+    const req = https.request(url, (res) => {
         console.log(`status - ${res.statusCode}`);
         console.log(`output - ${res.complete}`)
     }).on("error", (e) => {
         if (e) throw e
-    })
+    }).on('data', (d) => {
+        console.log(d);
+    });
+
+    req.end();
 }
