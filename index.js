@@ -28,13 +28,9 @@ function domainUpdate() {
     let password = process.env.PASSWORD;
     let hostname = process.env.HOSTNAME;
 
-    if (!username || !password || !hostname) {
-        console.log('Missing input required');
-    }
+    if (!username || !password || !hostname) throw new Error("Missing authentication input required");
 
     let url = `https://${username}:${password}@domains.google.com/nic/update?hostname=${hostname}`;
-
-    console.log(`url: ${url}`)
 
     const req = https.request(url, (res) => {
         console.log(`status - ${res.statusCode}`);
