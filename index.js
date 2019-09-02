@@ -12,7 +12,7 @@ let host = process.env.HOST || 'http://localhost';
 app.listen(port, (error) => {
     console.log(`[SERVER] Live on ${host}:${port}`);
     domainUpdate();
-    if (error) throw error
+    if (error) throw new Error(error);
 });
 
 app.use(express.static('.'));
@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 });
 
 function domainUpdate() {
-    console.log(`[SERVER] Posting to Google's Servers...`)
+    console.log(`[SERVER] Posting to Google's Servers...`);
     let username = process.env.USERNAME;
     let password = process.env.PASSWORD;
     let hostname = process.env.HOSTNAME;
@@ -34,9 +34,9 @@ function domainUpdate() {
 
     const req = https.request(url, (res) => {
         console.log(`status - ${res.statusCode}`);
-        console.log(`output - ${res.complete}`)
-    }).on("error", (e) => {
-        if (e) throw e
+        console.log(`output - ${res.complete}`);
+    }).on("error", (error) => {
+        if (error) throw new Error(error);
     }).on('data', (d) => {
         console.log(d);
     });
