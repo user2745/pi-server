@@ -14,11 +14,6 @@ app.listen(port, error => {
 
 app.use(express.static('.'));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/', 'index.html'));
-  res.status(200);
-});
-
 function domainUpdate() {
   console.log(`[SERVER] Posting to Google's Servers...`);
   let username = process.env.USERNAME;
