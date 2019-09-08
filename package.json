@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test mocha './*/*.spec.js'"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,11 @@
   },
   "homepage": "https://github.com/user2745/pi-server#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mocha": "^6.2.0"
+  },
+  "test-unit": "NODE_ENV=test mocha '/**/*.spec.js'",
+  "devDependencies": {
+    "supertest": "^4.0.2"
   }
 }
