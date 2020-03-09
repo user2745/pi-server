@@ -1,5 +1,3 @@
-RpiWS 
-
 Raspberry Pi web server built with NodeJs
 
 All software services are referenced at:
