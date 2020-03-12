@@ -2,6 +2,8 @@
 
 //Defaults to development
 let serverState = process.env.NODE_ENV || 'development';
+const https = require('https');
+const express = require('express');
 
 
 switch (serverState) {
