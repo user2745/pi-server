@@ -8,10 +8,11 @@ const express = require('express');
 
 switch (serverState) {
     case 'development':
-        require('./server')
+        require('./server');
         break;
         
         case 'production':
                 process.env.PORT = 80;
+                require('./server');
         break;
 }
