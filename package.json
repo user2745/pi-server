@@ -4,7 +4,7 @@
   "description": "simple raspberry pi web server running nodejs",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "prod": "NODE_ENV=production node index.js",
     "test": "NODE_ENV=test mocha './*/*.spec.js'"
   },
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/user2745/pi-server#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "mocha": "^8.0.0"
   },

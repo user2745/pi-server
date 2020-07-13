@@ -16,3 +16,6 @@ switch (serverState) {
                 require('./server');
         break;
 }
+
+
+// This code is causes unnecessary fluff
