@@ -13,7 +13,7 @@ let host = process.env.HOST || 'http://localhost';
 let url = "https://industrial.api.ubidots.com/api/v1.6/devices/dock-sensor/";
 
 var headers = {
-    'X-AUTH-TOKEN': 'BBFF-Ee83o8g7QnbULoPZ4QliMGiTYPiLqL',
+    'X-AUTH-TOKEN': '',
     'content-type': 'application/json'
 }
 
