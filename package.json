@@ -31,6 +31,6 @@
   },
   "test-unit": "NODE_ENV=test mocha '/**/*.spec.js'",
   "devDependencies": {
-    "supertest": "4.0.2"
+    "supertest": "5.0.0"
   }
 }
