@@ -27,7 +27,7 @@
   "homepage": "https://github.com/user2745/pi-server#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mocha": "^8.0.0"
+    "mocha": "^8.4.0"
   },
   "test-unit": "NODE_ENV=test mocha '/**/*.spec.js'",
   "devDependencies": {
